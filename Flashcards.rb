@@ -29,7 +29,11 @@ card_source = [
 {fall_asleep: "s'endormir"},
 {take_a_walk: "se promener"},
 ]
-cards = card_source
+test_array = [ # 30 values was waaay to many.
+{a: "1"},
+{b: "2"},
+]
+cards = test_array
 # cards = card_source # as to avoid editing card_source
 cards.shuffle! # randomizes card order!
 cards.each do |card|
@@ -42,6 +46,8 @@ cards.each do |card|
     else
     	puts "The correct translation is #{frnch}."
     	cards.push({eng => frnch})
+        puts cards
     end
   end
+  # break if guess == "quit" # This line of code errors. undefined variable guess
 end
