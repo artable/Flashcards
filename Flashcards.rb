@@ -47,8 +47,7 @@ cards.each do |card|
     	puts "The correct translation is #{frnch}."
     	cards.push({eng => frnch})
         puts cards
-        # FRNCH
     end
   end
-  break if guess == "quit" # This line of code errors. undefined variable guess
+  # break if guess == "quit" # This line of code errors. undefined variable guess
 end
