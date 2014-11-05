@@ -40,13 +40,13 @@ cards.each do |card|
   card.each do |eng, frnch|
     puts "Comment dit-on to #{eng}?"
     puts "you may need these. î, ê, é."
-    guess = gets.chomp
+     guess = gets.chomp
     if frnch == guess
         puts "Correct!"
     else
     	puts "The correct translation is #{frnch}."
     	cards.push({eng => frnch})
-        puts cards
+        puts cards # So I can see whats going on in that @#$/ array.
     end
   end
   # break if guess == "quit" # This line of code errors. undefined variable guess
