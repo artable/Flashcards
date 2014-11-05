@@ -58,5 +58,7 @@ frequencies.each do |card, int|
   if int == 1
     print ""
   else
-    card.each do |eng, frnch|
-      puts
+    int -= 1
+    card.each { |eng, frnch|puts "you missed #{eng} #{int} times." }
+  end
+end
