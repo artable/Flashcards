@@ -51,8 +51,12 @@ cards.each do |card|
 end
 frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
+# frequencies.each do |card, int|
+
+# end
 frequencies.each do |card, int|
-  int.to_i
-  int -= 1
-end
-puts frequencies
+  if int == 1
+    print ""
+  else
+    card.each do |eng, frnch|
+      puts
