@@ -29,9 +29,6 @@ card_source = [
 {fall_asleep: "s'endormir"},
 {take_a_walk: "se promener"},
 ]
-
-puts "hit"
-
 test_array = [ # 30 values was waaay to many.
 {a: "1"},
 {b: "2"},
