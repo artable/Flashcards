@@ -29,12 +29,12 @@ card_source = [
 {fall_asleep: "s'endormir"},
 {take_a_walk: "se promener"},
 ]
-test_array = [
-{rain: "pleuvoir"},
-{exit: "sortir"},
-]
-cards = test_array
-# cards = card_source
+# test_array = [
+# {rain: "pleuvoir"},
+# {exit: "sortir"},
+# ]
+# cards = test_array
+cards = card_source
 cards.shuffle! # randomizes card order!
 cards.each do |card|
   card.each do |eng, frnch|
@@ -51,9 +51,6 @@ cards.each do |card|
 end
 frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
-# frequencies.each do |card, int|
-
-# end
 frequencies.each do |card, int|
   if int == 1
     print ""
@@ -62,3 +59,4 @@ frequencies.each do |card, int|
     card.each { |eng, frnch|puts "you missed #{eng} #{int} times." }
   end
 end
+
