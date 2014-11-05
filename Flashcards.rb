@@ -49,5 +49,5 @@ cards.each do |card|
         puts cards
     end
   end
-  # break if guess == "quit" # This line of code errors. undefined variable guess
+  break if guess == "quit" # This line of code errors. undefined variable guess
 end
