@@ -42,7 +42,7 @@ cards.each do |card|
     puts "you may need these. î, ê, é."
     guess = gets.chomp
     if frnch == guess
-        puts "Correct!"
+      puts "Correct!"
     else
     	puts "The correct translation is #{frnch}."
       cards.push ({eng => frnch})
@@ -50,8 +50,8 @@ cards.each do |card|
   end
 end
 frequencies = Hash.new(0)
-cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
+# cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
 frequencies.each do |card, int|
-  # int -= 1
+  int -= 1
 end
 puts frequencies
