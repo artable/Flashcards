@@ -38,6 +38,7 @@ cards = test_array
 # cards = card_source
 right = 0 # for later use!
 wrong = 0
+total = card_source.count
 cards.shuffle! # randomizes card order!
 cards.each do |card|
   card.each do |eng, frnch|
@@ -57,16 +58,24 @@ end
 final = right - wrong
 frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
+count_fix_array = frequencies
+count_fix_array.each do |key, value|
+  if value == 2
+
+  else
+    value = 0
+  end
+end
 frequencies.each do |card, int|
   if int == 1
     print ""
   else
     int -= 1
-    card.each do |eng, frnch| 
-      puts "you missed #{eng} #{int} times." 
-      total = card_source.count
-      puts "total score: #{final} of #{total}"
+    card.each do |eng, frnch|
+      puts "you missed #{eng} #{int} times."
     end
   end
 end
+puts "total score: #{final} of #{total}"
+puts count_fix_array
 
