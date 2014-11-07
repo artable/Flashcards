@@ -29,13 +29,24 @@ card_source = [
 {fall_asleep: "s'endormir"},
 {take_a_walk: "se promener"},
 {shave: "se raser"},
+# Needs to have... all 150.
+]
+card_source_1_to_30 = [
+]
+card_source_31_to_60 = [
+]
+card_source_61_to_90 = [
+]
+card_source_91_to_120 = [
+]
+card_source_121_to_150 = [
 ]
 test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-cards = test_array # Still edits test_array... 
-# cards = card_source # Still edits card_source...
+# cards = test_array # Still edits test_array... 
+cards = card_source # Still edits card_source...
 right = 0 # for later use!
 wrong = 0
 fix = 0
