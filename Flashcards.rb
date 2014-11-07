@@ -34,8 +34,8 @@ test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-# cards = test_array
-cards = card_source
+cards = test_array
+# cards = card_source
 right = 0 # for later use!
 wrong = 0
 total = card_source.count
@@ -60,12 +60,12 @@ frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
 count_fix_array = frequencies
 count_fix_array.each do |key, value|
-  if value == 2
-
+  if value == 1
+    value = 1
   else
-    value = 0
+    value = 1
   end
-end
+end # does not work. wants to make values greater than one equal 1, and values that are 1 equal 0
 frequencies.each do |card, int|
   if int == 1
     print ""
