@@ -30,20 +30,16 @@ card_source = [
 {take_a_walk: "se promener"},
 {shave: "se raser"},
 ]
-<<<<<<< HEAD
-cards = card_source
-=======
 test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-# cards = test_array # Still edits test_array... 
-cards = card_source # Still edits card_source...
+cards = test_array # Still edits test_array... 
+# cards = card_source # Still edits card_source...
 right = 0 # for later use!
 wrong = 0
 fix = 0
-total = card_source.count
->>>>>>> Frequency-of-miss
+total = cards.count
 cards.shuffle! # randomizes card order!
 cards.each do |card|
   card.each do |eng, frnch|
@@ -51,14 +47,6 @@ cards.each do |card|
     puts "you may need these. î, ê, é."
     guess = gets.chomp
     if frnch == guess
-<<<<<<< HEAD
-        puts "Correct!"
-    else
-    	puts "The correct translation is #{frnch}."
-    end
-  end
-end
-=======
       puts "Correct!"
       right += 1
     else
@@ -72,8 +60,7 @@ frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
 frequencies.each do |k, v|
   unless v == 1
-    fix += v - 2
-    puts v
+    fix += v - 2 # - 2 because - 1 causes wrong = fix. 
   end
 end
 wrong -= fix
@@ -89,4 +76,4 @@ end
 puts "total score: #{final} of #{total}"
 
 
->>>>>>> Frequency-of-miss
+
