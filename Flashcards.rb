@@ -34,10 +34,11 @@ test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-cards = test_array # Still edits test_array... 
-# cards = card_source # Still edits card_source...
+# cards = test_array # Still edits test_array... 
+cards = card_source # Still edits card_source...
 right = 0 # for later use!
 wrong = 0
+fix = 0
 total = card_source.count
 cards.shuffle! # randomizes card order!
 cards.each do |card|
@@ -55,22 +56,19 @@ cards.each do |card|
     end
   end
 end
-final = right - wrong
 frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
-# count_fix_array = frequencies # Caused count_fix_array to edit frequencies.
-count_fix_array = Hash.new(0)
-cards.each {|key| count_fix_array[key] += 1}
-count_fix_array.each do |key, value|
-  if value == 1
-    count_fix_array[key] = 0
-  else
-    count_fix_array[key] = 1
+frequencies.each do |k, v|
+  unless v == 1
+    fix += v - 2
+    puts v
   end
 end
+wrong -= fix
+final = right - wrong
 frequencies.each do |card, int|
   if int == 1
-    print ""
+    nil
   else
     int -= 1
     card.each do |eng, frnch|
@@ -79,6 +77,5 @@ frequencies.each do |card, int|
   end
 end
 puts "total score: #{final} of #{total}"
-# puts count_fix_array
-# puts frequencies
+
 
