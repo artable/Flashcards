@@ -28,14 +28,14 @@ card_source = [
 {go_to_bed: "se coucher"},
 {fall_asleep: "s'endormir"},
 {take_a_walk: "se promener"},
-# Missing a card!!!!!!!!!!
+{shave: "se raser"},
 ]
 test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-cards = test_array
-# cards = card_source
+# cards = test_array
+cards = card_source
 right = 0 # for later use!
 wrong = 0
 total = card_source.count
@@ -65,7 +65,7 @@ count_fix_array.each do |key, value|
   else
     value = 1
   end
-end # does not work. wants to make values greater than one equal 1, and values that are 1 equal 0
+end # does nothing. wants value > 1 to = 1, and value 1 = 0
 frequencies.each do |card, int|
   if int == 1
     print ""
