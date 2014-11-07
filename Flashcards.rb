@@ -34,8 +34,8 @@ test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-cards = test_array
-# cards = card_source
+# cards = test_array
+cards = card_source
 right = 0 # for later use!
 wrong = 0
 total = card_source.count
@@ -72,7 +72,7 @@ frequencies.each do |card, int|
   else
     int -= 1
     card.each do |eng, frnch|
-      puts "you missed #{eng} #{int} times."
+      puts "you missed to #{eng} #{int} times."
     end
   end
 end
