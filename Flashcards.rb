@@ -67,9 +67,7 @@ end
 wrong -= fix
 final = right - wrong
 frequencies.each do |card, int|
-  if int == 1
-    nil
-  else
+  unless int == 1
     int -= 1
     card.each do |eng, frnch|
       puts "you missed to #{eng} #{int} times."
