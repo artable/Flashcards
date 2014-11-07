@@ -34,8 +34,8 @@ test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-# cards = test_array
-cards = card_source
+cards = test_array # Still edits test_array... 
+# cards = card_source # Still edits card_source...
 right = 0 # for later use!
 wrong = 0
 total = card_source.count
@@ -58,14 +58,16 @@ end
 final = right - wrong
 frequencies = Hash.new(0)
 cards.each {|key| frequencies[key] += 1} # Applies the keys to frequency numbers
-count_fix_array = frequencies
+# count_fix_array = frequencies # Caused count_fix_array to edit frequencies.
+count_fix_array = Hash.new(0)
+cards.each {|key| count_fix_array[key] += 1}
 count_fix_array.each do |key, value|
   if value == 1
-    value = 1
+    count_fix_array[key] = 0
   else
-    value = 1
+    count_fix_array[key] = 1
   end
-end # does nothing. wants value > 1 to = 1, and value 1 = 0
+end
 frequencies.each do |card, int|
   if int == 1
     print ""
@@ -77,5 +79,6 @@ frequencies.each do |card, int|
   end
 end
 puts "total score: #{final} of #{total}"
-puts count_fix_array
+# puts count_fix_array
+# puts frequencies
 
