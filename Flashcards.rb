@@ -316,9 +316,9 @@ test_array = [
 {rain: "pleuvoir"},
 {exit: "sortir"},
 ]
-# cards = test_array # Still edits test_array... 
-# cards = card_source_all # Still edits card_source...
-cards = card_source_1_30
+# cards = test_array
+cards = card_source_all
+# cards = card_source_1_30
 # cards = card_source_31_60
 # cards = card_source_61_90
 # cards = card_source_91_120
